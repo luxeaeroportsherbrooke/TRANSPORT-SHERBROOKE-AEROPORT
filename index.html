@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luxe Aéroport | Sherbrooke ↔ Montréal-Trudeau</title>
+<title>Luxe Aéroport Sherbrooke</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---gold:#b08d57;
+--red:#d90429;
 --black:#050505;
---dark:#101010;
+--card:#111111;
 --white:#ffffff;
+--gray:#cfcfcf;
 }
 
 *{
@@ -29,54 +32,61 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
+background:var(--black);
 color:white;
 overflow-x:hidden;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,.85);
-backdrop-filter:blur(15px);
+backdrop-filter:blur(12px);
 z-index:9999;
-border-bottom:1px solid rgba(176,141,87,.2);
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.nav-logo{
-height:70px;
+.logo{
+height:75px;
 }
 
 nav ul{
 display:flex;
-gap:30px;
+gap:35px;
 list-style:none;
 }
 
-nav a{
+nav ul a{
 text-decoration:none;
 color:white;
+font-weight:500;
 transition:.3s;
 }
 
-nav a:hover{
-color:var(--gold);
+nav ul a:hover{
+color:var(--red);
 }
 
-.phone-btn{
-background:var(--gold);
-color:black;
+.call-btn{
+background:var(--red);
 padding:12px 25px;
 border-radius:50px;
-font-weight:700;
+color:white;
 text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.call-btn:hover{
+transform:translateY(-3px);
 }
 
 /* HERO */
@@ -102,34 +112,9 @@ url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05");
 
 background-size:cover;
 background-position:center;
-
-position:relative;
-
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:800px;
-height:800px;
-background:rgba(176,141,87,.08);
-border-radius:50%;
-filter:blur(160px);
-animation:float 8s infinite ease-in-out;
-}
-
-@keyframes float{
-
-0%{transform:translateY(0);}
-50%{transform:translateY(-40px);}
-100%{transform:translateY(0);}
-
 }
 
 .hero-content{
-position:relative;
-z-index:2;
 max-width:900px;
 }
 
@@ -139,34 +124,33 @@ margin-bottom:25px;
 }
 
 .hero h1{
-font-size:72px;
+font-size:75px;
 font-weight:800;
 line-height:1.1;
 margin-bottom:20px;
 }
 
 .hero span{
-color:var(--gold);
+color:var(--red);
 }
 
 .hero p{
 font-size:22px;
 color:#e0e0e0;
-max-width:700px;
-margin:auto;
+margin-bottom:30px;
 }
 
-.hero-list{
-margin-top:25px;
+.hero-features{
 font-size:18px;
-line-height:1.9;
+line-height:2;
+color:#ffffff;
 }
 
 .hero-buttons{
+margin-top:35px;
 display:flex;
 justify-content:center;
 gap:15px;
-margin-top:35px;
 flex-wrap:wrap;
 }
 
@@ -179,19 +163,20 @@ transition:.3s;
 }
 
 .btn-primary{
-background:var(--gold);
-color:black;
-}
-
-.btn-primary:hover{
-transform:translateY(-4px);
-box-shadow:0 0 25px rgba(176,141,87,.4);
+background:var(--red);
+color:white;
 }
 
 .btn-secondary{
-border:1px solid rgba(255,255,255,.2);
+border:1px solid rgba(255,255,255,.25);
 color:white;
 }
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* SECTION */
 
 section{
 padding:100px 8%;
@@ -204,7 +189,26 @@ margin-bottom:60px;
 }
 
 .section-title span{
-color:var(--gold);
+color:var(--red);
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
+text-align:center;
+}
+
+.stat h2{
+font-size:60px;
+color:var(--red);
+}
+
+.stat p{
+color:#cccccc;
 }
 
 /* FLOTTE */
@@ -216,27 +220,21 @@ gap:30px;
 }
 
 .card{
-background:#111;
+background:var(--card);
 border-radius:20px;
 overflow:hidden;
-border:1px solid rgba(176,141,87,.15);
+border:1px solid rgba(255,255,255,.08);
 transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 35px rgba(176,141,87,.15);
 }
 
 .card img{
 width:100%;
 height:260px;
 object-fit:cover;
-transition:.5s;
-}
-
-.card:hover img{
-transform:scale(1.05);
 }
 
 .card-content{
@@ -245,35 +243,90 @@ padding:30px;
 
 .card h3{
 font-size:32px;
+margin-bottom:15px;
 }
 
 .price{
-font-size:58px;
+font-size:60px;
 font-weight:800;
-color:var(--gold);
-margin:15px 0;
+color:var(--red);
 }
 
 .subtitle{
 color:#cccccc;
+margin-top:10px;
+}
+
+/* TARIFS */
+
+.tarifs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.tarif-card{
+background:var(--card);
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.tarif-card h3{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.day-price{
+font-size:55px;
+font-weight:800;
+color:var(--red);
+}
+
+.night-price{
+font-size:28px;
+margin-top:15px;
+color:#ffffff;
+}
+
+.night-price span{
+color:var(--red);
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-logo{
+width:220px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
 
-<img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="nav-logo">
+<img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="logo">
 
 <ul>
 <li><a href="#vehicules">Flotte</a></li>
-<li><a href="#services">Services</a></li>
+<li><a href="#tarifs">Tarifs</a></li>
 <li><a href="#reservation">Réservation</a></li>
 </ul>
 
-<a href="tel:8733397207" class="phone-btn">
+<a href="tel:8733397207" class="call-btn">
 873-339-7207
 </a>
 
@@ -286,30 +339,53 @@ color:#cccccc;
 <img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="hero-logo">
 
 <h1>
-Transport privé
-<span>haut de gamme</span>
+Transport privé vers
+<span>Montréal-Trudeau</span>
 </h1>
 
 <p>
-Sherbrooke ↔ Montréal-Trudeau
+Sherbrooke • Estrie • Disponible 24h/24
 </p>
 
-<div class="hero-list">
+<div class="hero-features">
 ✓ Tarif fixe garanti<br>
-✓ Disponible 24h/24<br>
-✓ Berline et Van Premium
+✓ Berline privée et Van privée<br>
+✓ Service professionnel et ponctuel
 </div>
 
 <div class="hero-buttons">
 
 <a href="#reservation" class="btn btn-primary">
-Réserver
+Réserver maintenant
 </a>
 
 <a href="tel:8733397207" class="btn btn-secondary">
-Appeler
+Appeler maintenant
 </a>
 
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="stats">
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Disponible</p>
+</div>
+
+<div class="stat">
+<h2>279$</h2>
+<p>Berline privée</p>
+</div>
+
+<div class="stat">
+<h2>329$</h2>
+<p>Van privée</p>
 </div>
 
 </div>
@@ -330,7 +406,7 @@ Notre <span>Flotte</span>
 
 <div class="card-content">
 
-<h3>Berline Premium</h3>
+<h3>Berline Privée</h3>
 
 <div class="price">279$</div>
 
@@ -348,7 +424,7 @@ Jusqu'à 3 passagers
 
 <div class="card-content">
 
-<h3>Van Premium</h3>
+<h3>Van Privée</h3>
 
 <div class="price">329$</div>
 
@@ -363,69 +439,142 @@ Jusqu'à 7 passagers
 </div>
 
 </section>
-<section id="services">
+
+<section id="tarifs">
 
 <h2 class="section-title">
-Pourquoi choisir <span>Luxe Aéroport</span>
+Nos <span>Tarifs</span>
 </h2>
 
-<div class="features">
+<div class="tarifs">
 
-<div class="feature">
-<div class="icon">✈️</div>
-<h3>Tarif fixe</h3>
-<p>Aucun frais caché.</p>
+<div class="tarif-card">
+
+<h3>Berline Privée</h3>
+
+<div class="day-price">
+279$
 </div>
 
-<div class="feature">
-<div class="icon">🕒</div>
-<h3>24h / 24</h3>
-<p>Disponible jour et nuit.</p>
+<div class="night-price">
+🌙 Tarif de nuit : <span>309$</span>
 </div>
 
-<div class="feature">
-<div class="icon">🚘</div>
-<h3>Transport privé</h3>
-<p>Aucun partage du véhicule.</p>
 </div>
 
-<div class="feature">
-<div class="icon">🎒</div>
-<h3>Bagages inclus</h3>
-<p>Espace adapté aux voyageurs.</p>
+<div class="tarif-card">
+
+<h3>Van Privée</h3>
+
+<div class="day-price">
+329$
 </div>
 
-<div class="feature">
-<div class="icon">📍</div>
-<h3>Porte à porte</h3>
-<p>Départ directement de chez vous.</p>
+<div class="night-price">
+🌙 Tarif de nuit : <span>369$</span>
 </div>
 
-<div class="feature">
-<div class="icon">⭐</div>
-<h3>Service Premium</h3>
-<p>Ponctuel et professionnel.</p>
+</div>
+
+</div>
+
+</section>
+<section id="economies">
+
+<h2 class="section-title">
+Voyagez en groupe et <span>économisez</span>
+</h2>
+
+<div class="economy-card">
+
+<h3>Van Privée - 329$</h3>
+
+<p class="economy-subtitle">
+Plus vous êtes nombreux, moins ça coûte par personne.
+</p>
+
+<div class="economy-grid">
+
+<div class="economy-box">
+<h4>2</h4>
+<p>164.50$/pers</p>
+</div>
+
+<div class="economy-box">
+<h4>3</h4>
+<p>109.67$/pers</p>
+</div>
+
+<div class="economy-box">
+<h4>4</h4>
+<p>82.25$/pers</p>
+</div>
+
+<div class="economy-box">
+<h4>5</h4>
+<p>65.80$/pers</p>
+</div>
+
+<div class="economy-box">
+<h4>6</h4>
+<p>54.83$/pers</p>
+</div>
+
+<div class="economy-box">
+<h4>7</h4>
+<p>47.00$/pers</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="stats">
+<section id="services">
 
-<div class="stat">
-<h2>24/7</h2>
-<p>Disponible</p>
+<h2 class="section-title">
+Pourquoi choisir <span>Luxe Aéroport</span>
+</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+✈️
+<h3>Tarif fixe</h3>
+<p>Aucune surprise.</p>
 </div>
 
-<div class="stat">
-<h2>279$</h2>
-<p>Berline Premium</p>
+<div class="service-card">
+🕒
+<h3>24h/24</h3>
+<p>Disponible jour et nuit.</p>
 </div>
 
-<div class="stat">
-<h2>329$</h2>
-<p>Van Premium</p>
+<div class="service-card">
+🚘
+<h3>Privé</h3>
+<p>Aucun arrêt inutile.</p>
+</div>
+
+<div class="service-card">
+📍
+<h3>Porte à porte</h3>
+<p>Directement à votre domicile.</p>
+</div>
+
+<div class="service-card">
+🎒
+<h3>Bagages inclus</h3>
+<p>Grand espace disponible.</p>
+</div>
+
+<div class="service-card">
+⭐
+<h3>Ponctuel</h3>
+<p>Service professionnel.</p>
+</div>
+
 </div>
 
 </section>
@@ -464,9 +613,15 @@ Réservation <span>Rapide</span>
 </select>
 
 <select required>
-<option>Choisir un véhicule</option>
-<option>Berline Premium</option>
-<option>Van Premium</option>
+<option>Type de véhicule</option>
+<option>Berline Privée</option>
+<option>Van Privée</option>
+</select>
+
+<select required>
+<option>Type de trajet</option>
+<option>Jour</option>
+<option>Nuit (23h à 5h)</option>
 </select>
 
 </div>
@@ -485,9 +640,9 @@ Demander une réservation
 
 <img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="footer-logo">
 
-<h3>LUXE AÉROPORT</h3>
+<h3>LUXE AÉROPORT SHERBROOKE</h3>
 
-<p>Sherbrooke ↔ Montréal-Trudeau</p>
+<p>Transport privé vers Montréal-Trudeau</p>
 
 <p>📞 873-339-7207</p>
 
@@ -497,62 +652,80 @@ Demander une réservation
 
 </footer>
 
-<a href="tel:8733397207" class="floating-call">
+<a href="tel:8733397207" class="floating-phone">
 📞
 </a>
 
 <style>
 
-/* SERVICES */
+/* ÉCONOMIES */
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.economy-card{
+max-width:1000px;
+margin:auto;
+background:#111;
+padding:40px;
+border-radius:20px;
+text-align:center;
 }
 
-.feature{
+.economy-card h3{
+font-size:35px;
+color:#d90429;
+}
+
+.economy-subtitle{
+margin:15px 0 30px;
+color:#ccc;
+}
+
+.economy-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+}
+
+.economy-box{
+background:#1a1a1a;
+padding:20px;
+border-radius:15px;
+}
+
+.economy-box h4{
+font-size:30px;
+color:#d90429;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.service-card{
 background:#111;
 padding:30px;
 border-radius:20px;
 text-align:center;
-border:1px solid rgba(176,141,87,.15);
-transition:.4s;
+font-size:35px;
+transition:.3s;
 }
 
-.feature:hover{
+.service-card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 25px rgba(176,141,87,.15);
 }
 
-.icon{
-font-size:42px;
-margin-bottom:15px;
+.service-card h3{
+font-size:22px;
+margin:15px 0;
+color:#d90429;
 }
 
-.feature h3{
-color:#b08d57;
-margin-bottom:10px;
-}
-
-/* STATS */
-
-.stats{
-display:flex;
-justify-content:center;
-gap:70px;
-flex-wrap:wrap;
-text-align:center;
-}
-
-.stat h2{
-font-size:60px;
-color:#b08d57;
-font-weight:800;
-}
-
-.stat p{
-color:#cccccc;
+.service-card p{
+font-size:15px;
+color:#ccc;
 }
 
 /* FORMULAIRE */
@@ -561,9 +734,8 @@ color:#cccccc;
 max-width:900px;
 margin:auto;
 background:#111;
-padding:45px;
+padding:40px;
 border-radius:20px;
-border:1px solid rgba(176,141,87,.15);
 }
 
 .form-grid{
@@ -577,34 +749,21 @@ gap:15px;
 padding:16px;
 border:none;
 border-radius:12px;
-background:#1b1b1b;
+background:#1a1a1a;
 color:white;
-font-size:15px;
-}
-
-.form-grid input:focus,
-.form-grid select:focus{
-outline:none;
-box-shadow:0 0 10px rgba(176,141,87,.25);
 }
 
 button{
 width:100%;
-margin-top:20px;
 padding:18px;
+margin-top:20px;
 border:none;
 border-radius:12px;
-background:#b08d57;
-color:black;
+background:#d90429;
+color:white;
 font-size:18px;
 font-weight:700;
 cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:translateY(-3px);
-box-shadow:0 0 25px rgba(176,141,87,.35);
 }
 
 /* FOOTER */
@@ -613,7 +772,7 @@ footer{
 background:#030303;
 padding:70px 20px;
 text-align:center;
-border-top:1px solid rgba(176,141,87,.15);
+margin-top:80px;
 }
 
 .footer-logo{
@@ -622,79 +781,44 @@ margin-bottom:20px;
 }
 
 footer h3{
-color:#b08d57;
+color:#d90429;
 margin-bottom:15px;
-font-size:28px;
 }
 
 footer p{
 margin:8px 0;
-color:#d5d5d5;
+color:#ccc;
 }
 
-/* BOUTON APPEL FLOTTANT */
+/* BOUTON TÉLÉPHONE */
 
-.floating-call{
+.floating-phone{
 position:fixed;
-bottom:25px;
 right:25px;
+bottom:25px;
 width:70px;
 height:70px;
-background:#b08d57;
-color:black;
-font-size:30px;
+background:#d90429;
+border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-border-radius:50%;
+font-size:30px;
 text-decoration:none;
 z-index:9999;
-box-shadow:0 0 25px rgba(176,141,87,.35);
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.1);
-}
-
-100%{
-transform:scale(1);
-}
-
+box-shadow:0 0 25px rgba(217,4,41,.4);
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-nav ul{
-display:none;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero-logo{
-width:220px;
-}
-
 .form-grid{
 grid-template-columns:1fr;
 }
 
-.stats{
-gap:30px;
-}
-
-.phone-btn{
-display:none;
+.economy-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
 }
