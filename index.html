@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luxe Aéroport Sherbrooke</title>
+<title>Luxe Aéroport Sherbrooke | Transport Privé Montréal-Trudeau</title>
+
+<meta name="description" content="Transport privé Sherbrooke vers Montréal-Trudeau. Berline Premium et Van Premium. Disponible 24h/24.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -15,13 +17,14 @@
 :root{
 
 --gold:#c8a96b;
---gold-light:#e0c48a;
+--gold2:#e0c48a;
 
 --black:#050505;
+--dark:#0f0f0f;
 
 --glass:rgba(255,255,255,.05);
 
---border:rgba(200,169,107,.25);
+--border:rgba(200,169,107,.20);
 
 --white:#ffffff;
 
@@ -40,7 +43,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:var(--black);
+background:#050505;
 
 color:white;
 
@@ -55,7 +58,9 @@ width:8px;
 }
 
 ::-webkit-scrollbar-thumb{
+
 background:var(--gold);
+
 border-radius:50px;
 }
 
@@ -71,7 +76,7 @@ left:0;
 
 width:100%;
 
-padding:20px 8%;
+padding:18px 8%;
 
 display:flex;
 
@@ -79,16 +84,17 @@ justify-content:space-between;
 
 align-items:center;
 
-background:rgba(0,0,0,.75);
+background:rgba(0,0,0,.8);
 
-backdrop-filter:blur(25px);
+backdrop-filter:blur(20px);
 
 border-bottom:1px solid var(--border);
 
-z-index:9999;
+z-index:99999;
 }
 
 .logo{
+
 height:80px;
 }
 
@@ -96,7 +102,7 @@ nav ul{
 
 display:flex;
 
-gap:40px;
+gap:35px;
 
 list-style:none;
 }
@@ -122,16 +128,16 @@ color:var(--gold);
 background:linear-gradient(
 135deg,
 var(--gold),
-var(--gold-light)
+var(--gold2)
 );
 
 padding:14px 28px;
 
 border-radius:50px;
 
-color:black;
-
 font-weight:700;
+
+color:black;
 
 text-decoration:none;
 
@@ -140,10 +146,10 @@ transition:.4s;
 
 .phone-btn:hover{
 
-transform:translateY(-4px);
+transform:translateY(-3px);
 
 box-shadow:
-0 0 20px rgba(200,169,107,.4);
+0 0 25px rgba(200,169,107,.35);
 }
 
 /* HERO */
@@ -172,7 +178,6 @@ rgba(0,0,0,.85)
 url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05");
 
 background-size:cover;
-
 background-position:center;
 
 position:relative;
@@ -182,14 +187,14 @@ overflow:hidden;
 
 .hero::before{
 
-content:'';
+content:"";
 
 position:absolute;
 
 width:900px;
 height:900px;
 
-background:rgba(200,169,107,.06);
+background:rgba(200,169,107,.08);
 
 border-radius:50%;
 
@@ -205,7 +210,7 @@ transform:translateY(0);
 }
 
 50%{
-transform:translateY(-40px);
+transform:translateY(-50px);
 }
 
 100%{
@@ -250,16 +255,12 @@ color:var(--gold);
 
 font-size:24px;
 
-color:#dddddd;
+color:#e5e5e5;
 
-max-width:800px;
-
-margin:auto;
+margin-bottom:30px;
 }
 
 .hero-features{
-
-margin-top:30px;
 
 font-size:20px;
 
@@ -285,9 +286,9 @@ padding:18px 40px;
 
 border-radius:60px;
 
-text-decoration:none;
-
 font-weight:700;
+
+text-decoration:none;
 
 transition:.4s;
 }
@@ -297,7 +298,7 @@ transition:.4s;
 background:linear-gradient(
 135deg,
 var(--gold),
-var(--gold-light)
+var(--gold2)
 );
 
 color:black;
@@ -305,10 +306,10 @@ color:black;
 
 .btn-gold:hover{
 
-transform:translateY(-5px);
+transform:translateY(-4px);
 
 box-shadow:
-0 0 30px rgba(200,169,107,.4);
+0 0 35px rgba(200,169,107,.35);
 }
 
 .btn-glass{
@@ -351,7 +352,7 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-gap:30px;
+gap:25px;
 }
 
 .stat{
@@ -367,11 +368,18 @@ border-radius:25px;
 padding:40px;
 
 text-align:center;
+
+transition:.4s;
+}
+
+.stat:hover{
+
+transform:translateY(-8px);
 }
 
 .stat h2{
 
-font-size:65px;
+font-size:60px;
 
 color:var(--gold);
 }
@@ -381,6 +389,36 @@ color:var(--gold);
 margin-top:10px;
 
 color:#cccccc;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.phone-btn{
+display:none;
+}
+
+.hero-logo{
+width:220px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:42px;
+}
+
 }
 
 </style>
@@ -394,13 +432,19 @@ color:#cccccc;
 <img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="logo">
 
 <ul>
+
 <li><a href="#flotte">Flotte</a></li>
+
 <li><a href="#tarifs">Tarifs</a></li>
+
 <li><a href="#reservation">Réservation</a></li>
+
 </ul>
 
 <a href="tel:8733397207" class="phone-btn">
+
 873-339-7207
+
 </a>
 
 </nav>
@@ -421,9 +465,7 @@ LUXE
 
 <p>
 
-Le transport privé réinventé.
-
-Sherbrooke ↔ Montréal-Trudeau
+Transport privé Sherbrooke ↔ Montréal-Trudeau
 
 </p>
 
@@ -510,6 +552,226 @@ Pourquoi nous <span>choisir</span>
 Notre <span>Flotte Premium</span>
 </h2>
 
+<style>
+
+.fleet-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+
+gap:35px;
+}
+
+.fleet-card{
+
+background:var(--glass);
+
+backdrop-filter:blur(25px);
+
+border:1px solid var(--border);
+
+border-radius:30px;
+
+overflow:hidden;
+
+transition:.4s;
+}
+
+.fleet-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 40px rgba(200,169,107,.15);
+}
+
+.fleet-card img{
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+}
+
+.fleet-content{
+
+padding:35px;
+}
+
+.fleet-content h3{
+
+font-size:35px;
+
+margin-bottom:15px;
+}
+
+.fleet-price{
+
+font-size:70px;
+
+font-weight:800;
+
+color:var(--gold);
+}
+
+.night-price{
+
+margin-top:12px;
+
+font-size:20px;
+
+color:#dddddd;
+}
+
+.fleet-content ul{
+
+list-style:none;
+
+margin-top:25px;
+
+line-height:2;
+}
+
+/* TARIFS */
+
+.tarif-banner{
+
+margin-top:80px;
+
+background:linear-gradient(
+135deg,
+rgba(200,169,107,.10),
+rgba(255,255,255,.02)
+);
+
+border:1px solid var(--border);
+
+backdrop-filter:blur(20px);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+}
+
+.tarif-banner h2{
+
+font-size:50px;
+
+margin-bottom:15px;
+}
+
+.tarif-banner span{
+
+color:var(--gold);
+}
+
+.tarif-banner p{
+
+color:#cccccc;
+}
+
+/* GROUPE */
+
+.group-section{
+
+margin-top:80px;
+}
+
+.group-card{
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+backdrop-filter:blur(25px);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+}
+
+.group-card h3{
+
+font-size:55px;
+
+margin-bottom:20px;
+}
+
+.group-card span{
+
+color:var(--gold);
+}
+
+.group-card p{
+
+color:#cccccc;
+
+margin-bottom:40px;
+}
+
+.group-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+
+gap:15px;
+}
+
+.group-box{
+
+background:rgba(255,255,255,.03);
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.3s;
+}
+
+.group-box:hover{
+
+transform:translateY(-5px);
+}
+
+.group-box h4{
+
+font-size:42px;
+
+color:var(--gold);
+}
+
+.group-box p{
+
+margin-top:8px;
+
+color:white;
+}
+
+@media(max-width:768px){
+
+.fleet-grid{
+
+grid-template-columns:1fr;
+}
+
+.group-card h3{
+
+font-size:36px;
+}
+
+}
+
+</style>
+
 <div class="fleet-grid">
 
 <div class="fleet-card">
@@ -529,10 +791,17 @@ Notre <span>Flotte Premium</span>
 </div>
 
 <ul>
+
 <li>✓ Jusqu'à 3 passagers</li>
-<li>✓ Transport privé</li>
-<li>✓ Confort supérieur</li>
+
+<li>✓ Transport privé exclusif</li>
+
+<li>✓ Climatisation</li>
+
+<li>✓ Confort haut de gamme</li>
+
 <li>✓ Porte à porte</li>
+
 </ul>
 
 </div>
@@ -556,10 +825,17 @@ Notre <span>Flotte Premium</span>
 </div>
 
 <ul>
+
 <li>✓ Jusqu'à 7 passagers</li>
+
 <li>✓ Grand espace bagages</li>
-<li>✓ Idéal pour familles</li>
+
+<li>✓ Familles et groupes</li>
+
+<li>✓ Transport privé exclusif</li>
+
 <li>✓ Porte à porte</li>
+
 </ul>
 
 </div>
@@ -568,55 +844,72 @@ Notre <span>Flotte Premium</span>
 
 </div>
 
-</section>
+<div class="tarif-banner">
 
-<section id="tarifs">
-
-<h2 class="section-title">
-Voyagez en groupe et <span>économisez</span>
+<h2>
+Tarifs <span>fixes garantis</span>
 </h2>
+
+<p>
+
+Aucun taximètre. Aucun frais caché.
+
+Le prix est confirmé avant le départ.
+
+</p>
+
+</div>
+
+<div class="group-section">
 
 <div class="group-card">
 
 <h3>
+
 À partir de seulement
+
 <span>47$ / personne</span>
+
 </h3>
 
 <p>
-Plus vous êtes nombreux, plus le coût par personne diminue.
+
+Voyagez en groupe et économisez avec notre Van Premium.
+
 </p>
 
 <div class="group-grid">
 
 <div class="group-box">
 <h4>2</h4>
-<p>164.50$</p>
+<p>164.50$/pers</p>
 </div>
 
 <div class="group-box">
 <h4>3</h4>
-<p>109.67$</p>
+<p>109.67$/pers</p>
 </div>
 
 <div class="group-box">
 <h4>4</h4>
-<p>82.25$</p>
+<p>82.25$/pers</p>
 </div>
 
 <div class="group-box">
 <h4>5</h4>
-<p>65.80$</p>
+<p>65.80$/pers</p>
 </div>
 
 <div class="group-box">
 <h4>6</h4>
-<p>54.83$</p>
+<p>54.83$/pers</p>
 </div>
 
 <div class="group-box">
 <h4>7</h4>
-<p>47.00$</p>
+<p>47.00$/pers</p>
+</div>
+
 </div>
 
 </div>
@@ -624,31 +917,264 @@ Plus vous êtes nombreux, plus le coût par personne diminue.
 </div>
 
 </section>
+  <section id="reservation">
 
-<section id="reservation">
+<style>
+
+.reservation-box{
+
+max-width:1100px;
+
+margin:auto;
+
+background:var(--glass);
+
+backdrop-filter:blur(25px);
+
+border:1px solid var(--border);
+
+border-radius:30px;
+
+padding:50px;
+
+box-shadow:
+0 0 50px rgba(200,169,107,.08);
+
+}
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+}
+
+.form-grid input,
+.form-grid select{
+
+width:100%;
+
+padding:18px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:15px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus{
+
+border:1px solid var(--gold);
+
+box-shadow:
+0 0 20px rgba(200,169,107,.15);
+}
+
+.reserve-btn{
+
+width:100%;
+
+margin-top:20px;
+
+padding:20px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:700;
+
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--gold2)
+);
+
+color:black;
+
+transition:.4s;
+}
+
+.reserve-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 35px rgba(200,169,107,.30);
+}
+
+/* FOOTER */
+
+footer{
+
+padding:80px 20px;
+
+text-align:center;
+
+border-top:1px solid var(--border);
+
+margin-top:100px;
+}
+
+.footer-logo{
+
+width:220px;
+
+margin-bottom:25px;
+}
+
+footer h3{
+
+font-size:34px;
+
+color:var(--gold);
+
+margin-bottom:15px;
+}
+
+footer p{
+
+margin:10px 0;
+
+color:#cccccc;
+}
+
+/* BOUTON APPEL */
+
+.floating-call{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:75px;
+
+height:75px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+text-decoration:none;
+
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--gold2)
+);
+
+color:black;
+
+box-shadow:
+0 0 35px rgba(200,169,107,.30);
+
+z-index:999999;
+
+transition:.3s;
+}
+
+.floating-call:hover{
+
+transform:scale(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+}
+
+.footer-logo{
+
+width:170px;
+}
+
+}
+
+</style>
 
 <h2 class="section-title">
+
 Réservation <span>Rapide</span>
+
 </h2>
 
 <div class="reservation-box">
 
-<form>
+<form action="https://formsubmit.co/monautomecanique@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="Nouvelle réservation Luxe Aéroport">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
 
 <div class="form-grid">
 
-<input type="text" placeholder="Nom complet">
+<input
+type="text"
+name="Nom complet"
+placeholder="Nom complet"
+required>
 
-<input type="tel" placeholder="Téléphone">
+<input
+type="tel"
+name="Téléphone"
+placeholder="Téléphone"
+required>
 
-<input type="email" placeholder="Courriel">
+<input
+type="email"
+name="Courriel"
+placeholder="Courriel"
+required>
 
-<input type="text" placeholder="Adresse de départ">
+<input
+type="text"
+name="Adresse de départ"
+placeholder="Adresse de départ"
+required>
 
-<input type="date">
+<input
+type="date"
+name="Date du transport"
+required>
 
-<select>
-<option>Nombre de passagers</option>
+<select
+name="Nombre de passagers"
+required>
+
+<option value="">
+Nombre de passagers
+</option>
+
 <option>1</option>
 <option>2</option>
 <option>3</option>
@@ -656,24 +1182,45 @@ Réservation <span>Rapide</span>
 <option>5</option>
 <option>6</option>
 <option>7</option>
+
 </select>
 
-<select>
-<option>Choisir un véhicule</option>
+<select
+name="Véhicule"
+required>
+
+<option value="">
+Choisir un véhicule
+</option>
+
 <option>Berline Premium</option>
+
 <option>Van Premium</option>
+
 </select>
 
-<select>
-<option>Type de trajet</option>
+<select
+name="Type de trajet"
+required>
+
+<option value="">
+Type de trajet
+</option>
+
 <option>Jour</option>
-<option>Nuit</option>
+
+<option>Nuit (23h à 5h)</option>
+
 </select>
 
 </div>
 
-<button class="reserve-btn">
+<button
+type="submit"
+class="reserve-btn">
+
 Demander une réservation
+
 </button>
 
 </form>
@@ -684,257 +1231,39 @@ Demander une réservation
 
 <footer>
 
-<img src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png" class="footer-logo">
+<img
+src="ChatGPT Image Jun 2, 2026 at 03_01_47 PM.png"
+class="footer-logo">
 
-<h3>LUXE AÉROPORT SHERBROOKE</h3>
+<h3>
+LUXE AÉROPORT SHERBROOKE
+</h3>
 
-<p>Transport privé haut de gamme vers Montréal-Trudeau</p>
+<p>
+Transport privé vers Montréal-Trudeau
+</p>
 
-<p>📞 873-339-7207</p>
+<p>
+📞 873-339-7207
+</p>
 
-<p>✉️ info@luxeaeroportsherbrooke.com</p>
+<p>
+✉️ monautomecanique@gmail.com
+</p>
 
-<p>Disponible 24h/24</p>
+<p>
+Disponible 24h / 24
+</p>
 
 </footer>
 
-<a href="tel:8733397207" class="floating-call">
+<a
+href="tel:8733397207"
+class="floating-call">
+
 📞
+
 </a>
-
-<style>
-
-/* FLOTTE */
-
-.fleet-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-gap:35px;
-}
-
-.fleet-card{
-background:var(--glass);
-backdrop-filter:blur(25px);
-border:1px solid var(--border);
-border-radius:30px;
-overflow:hidden;
-transition:.4s;
-}
-
-.fleet-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 40px rgba(200,169,107,.15);
-}
-
-.fleet-card img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.fleet-content{
-padding:35px;
-}
-
-.fleet-content h3{
-font-size:34px;
-margin-bottom:15px;
-}
-
-.fleet-price{
-font-size:70px;
-font-weight:800;
-color:var(--gold);
-}
-
-.night-price{
-margin-top:10px;
-font-size:20px;
-color:#ddd;
-}
-
-.fleet-content ul{
-list-style:none;
-margin-top:25px;
-line-height:2;
-}
-
-/* GROUPE */
-
-.group-card{
-max-width:1100px;
-margin:auto;
-background:var(--glass);
-backdrop-filter:blur(25px);
-border:1px solid var(--border);
-border-radius:30px;
-padding:50px;
-text-align:center;
-}
-
-.group-card h3{
-font-size:50px;
-}
-
-.group-card span{
-color:var(--gold);
-}
-
-.group-card p{
-margin:20px 0 40px;
-color:#ccc;
-}
-
-.group-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:15px;
-}
-
-.group-box{
-background:rgba(255,255,255,.03);
-border:1px solid rgba(255,255,255,.05);
-padding:25px;
-border-radius:20px;
-}
-
-.group-box h4{
-font-size:40px;
-color:var(--gold);
-}
-
-/* FORMULAIRE */
-
-.reservation-box{
-max-width:1000px;
-margin:auto;
-background:var(--glass);
-backdrop-filter:blur(25px);
-border:1px solid var(--border);
-border-radius:30px;
-padding:50px;
-}
-
-.form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-}
-
-.form-grid input,
-.form-grid select{
-padding:18px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-border-radius:15px;
-color:white;
-font-size:15px;
-}
-
-.reserve-btn{
-width:100%;
-margin-top:20px;
-padding:20px;
-border:none;
-border-radius:15px;
-background:linear-gradient(
-135deg,
-var(--gold),
-var(--gold-light)
-);
-color:black;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-padding:80px 20px;
-text-align:center;
-border-top:1px solid var(--border);
-}
-
-.footer-logo{
-width:220px;
-margin-bottom:20px;
-}
-
-footer h3{
-color:var(--gold);
-margin-bottom:15px;
-font-size:32px;
-}
-
-footer p{
-margin:8px 0;
-color:#ccc;
-}
-
-/* APPEL FLOTTANT */
-
-.floating-call{
-position:fixed;
-right:25px;
-bottom:25px;
-width:75px;
-height:75px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-text-decoration:none;
-background:linear-gradient(
-135deg,
-var(--gold),
-var(--gold-light)
-);
-color:black;
-box-shadow:0 0 30px rgba(200,169,107,.35);
-z-index:99999;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.fleet-grid{
-grid-template-columns:1fr;
-}
-
-.form-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:55px;
-}
-
-.section-title{
-font-size:42px;
-}
-
-.group-card h3{
-font-size:34px;
-}
-
-.logo{
-height:60px;
-}
-
-nav ul{
-display:none;
-}
-
-.phone-btn{
-display:none;
-}
-
-}
-
-</style>
 
 </body>
 </html>
